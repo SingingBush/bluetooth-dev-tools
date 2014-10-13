@@ -1,0 +1,8 @@
+/dist/
+/build/
+/out/
+
+.idea/dictionaries/sjc.xml
+.idea/libraries/
+.idea/uiDesigner.xml
+.idea/workspace.xml
