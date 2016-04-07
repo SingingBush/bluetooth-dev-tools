@@ -1,8 +1,10 @@
-/dist/
-/build/
-/out/
+dist/
+build/
+out/
+target/
 
-.idea/dictionaries/sjc.xml
-.idea/libraries/
-.idea/uiDesigner.xml
-.idea/workspace.xml
+.gradle/
+
+# Ignore Intellij specific files
+.idea/
+*.iml
