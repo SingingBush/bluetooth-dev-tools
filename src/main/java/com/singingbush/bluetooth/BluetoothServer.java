@@ -2,15 +2,15 @@
 
 package com.singingbush.bluetooth;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import javax.bluetooth.*;
 import java.io.IOException;
 
 public class BluetoothServer {
 
-    private static final Logger LOG = LoggerFactory.getLogger(BluetoothServer.class);
+    private static final Logger LOG = LogManager.getLogger(BluetoothServer.class);
 
     public void start() {
         final LocalDevice localDevice;
