@@ -13,6 +13,8 @@ repositories {
 
 dependencies {
     compile 'org.apache.commons:commons-lang3:3.3.2'
+    //compile files('lib/bluecove-2.1.1-SNAPSHOT.jar')
+    //compile files('lib/bluecove-gpl-2.1.1-SNAPSHOT.jar')
     compile files('lib/bluecove-2.1.2.jar')  // updated Bluecove fork: https://github.com/empeeoh/bluecove-osx
     //compile 'io.ultreia:bluecove:2.1.1'    // another Bluecove fork: https://gitlab.com/ultreiaio/bluecove
 
