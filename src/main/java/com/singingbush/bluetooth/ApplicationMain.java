@@ -1,8 +1,4 @@
-/*$Id$*/
 package com.singingbush.bluetooth;
-
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 import javax.bluetooth.DataElement;
 import javax.bluetooth.DeviceClass;
@@ -13,16 +9,18 @@ import javax.bluetooth.RemoteDevice;
 import javax.bluetooth.ServiceRecord;
 import javax.bluetooth.UUID;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 /**
  * Entry point for the application from the terminal
  */
 public class ApplicationMain {
 
-    public static final Logger LOG = LogManager.getLogger(ApplicationMain.class);
+    private static final Logger log = LoggerFactory.getLogger(ApplicationMain.class);
 
-    public static void main(final String[] args) {
-        LOG.info("started..");
-
+    public static void main(String[] args) {
+        log.info("Starting Bluetooth server");
         BluetoothServer server = new BluetoothServer();
         server.start();
     }
