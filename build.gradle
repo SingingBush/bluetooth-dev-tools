@@ -4,6 +4,7 @@ mainClassName = 'com.singingbush.bluetooth.ApplicationMain'
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
+group = 'com.singingbush'
 version = '1.0'
 
 repositories {
@@ -12,10 +13,27 @@ repositories {
 
 dependencies {
     compile 'org.apache.commons:commons-lang3:3.3.2'
-    compile files('lib/bluecove-2.1.1-SNAPSHOT.jar')
+    compile files('lib/bluecove-2.1.2.jar')  // updated Bluecove fork: https://github.com/empeeoh/bluecove-osx
+    //compile 'io.ultreia:bluecove:2.1.1'    // another Bluecove fork: https://gitlab.com/ultreiaio/bluecove
 
-    compile 'org.apache.logging.log4j:log4j-api:2.5'
-    compile 'org.apache.logging.log4j:log4j-core:2.5'
+    compile 'org.apache.logging.log4j:log4j-api:2.9.1'
+    compile 'org.apache.logging.log4j:log4j-core:2.9.1'
+    compile 'org.slf4j:slf4j-api:1.7.25'
+    compile 'org.slf4j:slf4j-simple:1.7.25'
 
     testCompile group: 'junit', name: 'junit', version: '4.11'
 }
+
+//applicationDefaultJvmArgs = ["-Dgreeting.language=en"]
+
+println "Compiling on ${System.properties['os.name']} ${System.properties['os.arch']} using Java "+JavaVersion.current()
+
+task printDependencies << {
+    println " Compile Dependencies ".center( 60, '-' )
+    configurations.compile.each { file -> println "  $file.name" }
+//    project.configurations['compile'].allDependencies.each { dep ->
+//        println "\t$dep.group:$dep.name\t$dep.version"
+//    }
+    println "-" * 60
+}
+printDependencies.execute()
