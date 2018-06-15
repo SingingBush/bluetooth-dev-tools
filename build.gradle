@@ -12,9 +12,14 @@ repositories {
 }
 
 dependencies {
-    compile 'org.apache.commons:commons-lang3:3.3.2'
-    compile files('lib/bluecove-2.1.2.jar')  // updated Bluecove fork: https://github.com/empeeoh/bluecove-osx
+    //compile 'org.apache.commons:commons-lang3:3.3.2'
+    //compile files('lib/bluecove-2.1.2.jar')  // updated Bluecove fork: https://github.com/empeeoh/bluecove-osx
     //compile 'io.ultreia:bluecove:2.1.1'    // another Bluecove fork: https://gitlab.com/ultreiaio/bluecove
+
+    // Looks like the most promising Java Bluetooth lib is https://github.com/sputnikdev/
+    compile 'org.sputnikdev:bluetooth-manager:1.5.2'
+    compile 'org.sputnikdev:bluetooth-manager-tinyb:1.3.2'
+    //compile 'org.sputnikdev:bluetooth-manager-bluegiga:1.2.2'
 
     compile 'org.apache.logging.log4j:log4j-api:2.9.1'
     compile 'org.apache.logging.log4j:log4j-core:2.9.1'
