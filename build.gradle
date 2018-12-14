@@ -30,12 +30,13 @@ dependencies {
 
 println "Compiling on ${System.properties['os.name']} ${System.properties['os.arch']} using Java "+JavaVersion.current()
 
-task printDependencies << {
+task('printDependencies', {
     println " Compile Dependencies ".center( 60, '-' )
     configurations.compile.each { file -> println "  $file.name" }
 //    project.configurations['compile'].allDependencies.each { dep ->
 //        println "\t$dep.group:$dep.name\t$dep.version"
 //    }
     println "-" * 60
-}
-printDependencies.execute()
+})
+
+printDependencies
