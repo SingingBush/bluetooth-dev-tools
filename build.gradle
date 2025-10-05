@@ -1,3 +1,4 @@
+// build requires JDK 17 or above
 
 plugins {
     id 'java'
@@ -8,15 +9,14 @@ repositories {
     mavenCentral()
 }
 
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
-
 group = 'com.singingbush'
 version = '1.0'
 
 java {
+    sourceCompatibility = 17
+    targetCompatibility = 17
     // toolchain {
-    //     languageVersion = JavaLanguageVersion.of(11)
+    //     languageVersion = JavaLanguageVersion.of(17)
     // }
     withJavadocJar()
     withSourcesJar()
