@@ -26,8 +26,8 @@ dependencies {
     implementation 'org.apache.commons:commons-lang3:3.19.+'
     //implementation files('lib/bluecove-2.1.1-SNAPSHOT.jar')
     //implementation files('lib/bluecove-gpl-2.1.1-SNAPSHOT.jar')
-    implementation files('lib/bluecove-2.1.2.jar')  // updated Bluecove fork: https://github.com/empeeoh/bluecove-osx
-    //implementation 'io.ultreia:bluecove:2.1.1'    // another Bluecove fork: https://gitlab.com/ultreiaio/bluecove
+    //implementation files('lib/bluecove-2.1.2.jar')  // updated Bluecove fork: https://github.com/empeeoh/bluecove-osx
+    implementation 'io.ultreia:bluecove:2.1.1'    // another Bluecove fork: https://gitlab.com/ultreiaio/bluecove
 
     implementation 'org.apache.logging.log4j:log4j-api:2.25.+'
     implementation 'org.apache.logging.log4j:log4j-core:2.25.+'
