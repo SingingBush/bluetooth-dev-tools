@@ -6,14 +6,14 @@ import org.slf4j.LoggerFactory;
 import javax.bluetooth.*;
 import java.io.IOException;
 
-public class BluetoothServer {
+public class BluetoothServer implements Runnable {
 
     private static final Logger log = LoggerFactory.getLogger(BluetoothServer.class);
 
     final Object inquiryCompletedLock = new Object();
 
-    public void start() {
-
+    @Override
+    public void run() {
         try {
             final String stack = LocalDevice.getProperty("bluecove.stack"); // "winsock" (Microsoft), "widcomm" (Broadcom), "bluesoleil"
 

@@ -21,8 +21,17 @@ public class ApplicationMain {
 
     public static void main(String[] args) {
         log.info("Starting Bluetooth server");
-        BluetoothServer server = new BluetoothServer();
-        server.start();
+        final BluetoothServer server = new BluetoothServer();
+        final Thread thread = new Thread(server, "Bluetooth server");
+
+        thread.start();
+        try {
+            thread.join();
+        } catch (final InterruptedException e) {
+            log.error("The BluetoothServer thread was interrupted", e);
+            throw new RuntimeException(e);
+        }
+
     }
 
 }
